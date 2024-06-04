@@ -7,4 +7,23 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-Router.map(function () {});
+Router.map(function () {
+  this.route('films', function () {
+    this.route('show', { path: ":id" });
+  });
+  this.route('people', function () {
+    this.route('show', { path: ":id" });
+  });
+  this.route('planets', function () {
+    this.route('show', { path: ":id" });
+  });
+  this.route('species', function () {
+    this.route('show', { path: ":id" });
+  });
+  this.route('starships', function () {
+    this.route('show', { path: ":id" });
+  });
+  this.route('vehicles', function () {
+    this.route('show', { path: ":id" });
+  });
+});
