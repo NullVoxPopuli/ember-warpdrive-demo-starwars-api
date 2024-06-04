@@ -6,7 +6,7 @@ export default Route(
     <ul>
       {{#each @model.results as |result|}}
         <li>
-          {{result.title}}
+          <h2>{{result.title}}</h2>
 
           <h3>Starships</h3>
           <ul>
