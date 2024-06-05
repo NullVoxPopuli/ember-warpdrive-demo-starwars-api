@@ -26,7 +26,7 @@
     "test:ember": "vite build --mode test && ember test --path dist"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.4",
+    "@babel/core": "^7.24.6",
     "@babel/eslint-parser": "^7.24.1",
     "@babel/plugin-proposal-decorators": "^7.24.1",
     "@ember/optional-features": "^2.1.0",
@@ -49,7 +49,6 @@
     "ember-cli-babel": "^8.2.0",
     "ember-cli-htmlbars": "^6.3.0",
     "ember-cli-inject-live-reload": "^2.1.0",
-    "ember-data": "~5.3.3",
     "ember-load-initializers": "^2.1.2",
     "ember-modifier": "^4.1.0",
     "ember-page-title": "^8.2.3",
@@ -77,6 +76,17 @@
     "edition": "octane"
   },
   "dependencies": {
+    "@ember-data/request": "5.4.0-alpha.74",
+    "@ember-data/store": "5.4.0-alpha.74",
+    "@embroider/macros": "^1.16.3-unstable.4d74274",
+    "@warp-drive/build-config": "0.0.0-alpha.11",
+    "@warp-drive/ember": "0.0.0-alpha.36",
+    "ember-data": "5.4.0-alpha.74",
     "ember-route-template": "^1.0.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "@embroider/macros": "^1.16.3-unstable.4d74274"
+    }
   }
 }

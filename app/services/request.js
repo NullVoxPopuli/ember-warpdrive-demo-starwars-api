@@ -15,10 +15,15 @@ const SWAPI = {
   }
 }
 
+/**
+ * TODO:
+ *  - chache handling?
+ *  - pagination?
+ *  - linking?
+ */
 export default class extends RequestManager {
   constructor(args) {
     super(args);
-    // TODO: cache handler?
     this.use([SWAPI]);
   }
 }

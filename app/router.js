@@ -8,22 +8,8 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('films', function () {
-    this.route('show', { path: ":id" });
-  });
-  this.route('people', function () {
-    this.route('show', { path: ":id" });
-  });
-  this.route('planets', function () {
-    this.route('show', { path: ":id" });
-  });
-  this.route('species', function () {
-    this.route('show', { path: ":id" });
-  });
-  this.route('starships', function () {
-    this.route('show', { path: ":id" });
-  });
-  this.route('vehicles', function () {
-    this.route('show', { path: ":id" });
-  });
+  this.route('films');
+  // By not nesting, we can visit a 'film'
+  // directly without waiting for the 'films' data.
+  this.route('film', { path: 'films/:id' });
 });

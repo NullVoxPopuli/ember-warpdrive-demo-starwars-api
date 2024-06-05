@@ -5,10 +5,10 @@ export default class Films extends Route {
   @service('request') manager;
 
   async model() {
-    const request = await this.manager.request({
+    let request = this.manager.request({
       url: '/films'
     });
 
-    return request.content;
+    return { request };
   }
 }
