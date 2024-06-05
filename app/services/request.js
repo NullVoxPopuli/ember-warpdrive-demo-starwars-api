@@ -1,5 +1,5 @@
 import RequestManager from '@ember-data/request';
-import Fetch from '@ember-data/request/fetch';
+//import Fetch from '@ember-data/request/fetch';
 
 const SWAPI = {
   async request(context) {
@@ -12,8 +12,8 @@ const SWAPI = {
     context.setStream(response.clone().body);
 
     return response.json();
-  }
-}
+  },
+};
 
 /**
  * TODO:

@@ -1,11 +1,12 @@
-import { pageTitle } from "ember-page-title";
-import { LinkTo } from '@ember/routing';
 import { on } from '@ember/modifier';
-import Route from "ember-route-template";
-import { Request } from '@warp-drive/ember';
+import { LinkTo } from '@ember/routing';
 
-import { Spinner } from './components/spinner';
+import { Request } from '@warp-drive/ember';
+import { pageTitle } from "ember-page-title";
+import Route from "ember-route-template";
+
 import { RequestError } from './components/error';
+import { Spinner } from './components/spinner';
 
 function idFor(film) {
   let url = film.url;
@@ -17,12 +18,12 @@ function idFor(film) {
 
 export default Route(
   <template>
-    {{ (pageTitle "Films") }}
+    {{pageTitle "Films"}}
 
     <Request @request={{@model.request}}>
       <:loading as |state|>
         <Spinner @percentDone={{state.completedRatio}} />
-        <button {{on "click" state.abort}}>Cancel</button>
+        <button type="button" {{on "click" state.abort}}>Cancel</button>
       </:loading>
 
       <:error as |error state|>
@@ -32,7 +33,6 @@ export default Route(
       <:content as |result|>
         <ul>
           {{#each result.results as |result|}}
-          {{log result}}
             <li>
               <h2>{{result.title}}</h2>
               <LinkTo @route="film" @model={{idFor result}}>View Details</LinkTo>

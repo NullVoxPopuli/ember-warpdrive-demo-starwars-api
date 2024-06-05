@@ -1,10 +1,11 @@
-import { pageTitle } from "ember-page-title";
 import { LinkTo } from '@ember/routing';
+
+import { pageTitle } from "ember-page-title";
 import Route from "ember-route-template";
 
 export default Route(
   <template>
-    {{ (pageTitle "StarWars API") }}
+    {{pageTitle "StarWars API"}}
 
     <nav>
       <LinkTo @route="films">Films</LinkTo>

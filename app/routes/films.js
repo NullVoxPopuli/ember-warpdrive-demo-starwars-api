@@ -6,7 +6,7 @@ export default class Films extends Route {
 
   async model() {
     let request = this.manager.request({
-      url: '/films'
+      url: '/films',
     });
 
     return { request };

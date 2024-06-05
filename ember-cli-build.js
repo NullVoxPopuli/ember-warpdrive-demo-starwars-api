@@ -6,10 +6,11 @@ const { maybeEmbroider } = require('@embroider/test-setup');
 module.exports = async function (defaults) {
   const { setConfig } = await import('@warp-drive/build-config');
 
+  // For Debugging build macros
   // Everything is on the "default" export...
-  const {
-    default: { MacrosConfig },
-  } = await import('@embroider/macros/src/node.js');
+  //const {
+  //  default: { MacrosConfig },
+  //} = await import('@embroider/macros/src/node.js');
 
   const app = new EmberApp(defaults, {
     'ember-cli-babel': {
@@ -22,9 +23,9 @@ module.exports = async function (defaults) {
     compatWith: '99.0',
   });
 
-  let macros = MacrosConfig.for(app, __dirname);
-
-  let warpDriveConfig = macros.globalConfig['WarpDrive'];
+  //let macros = MacrosConfig.for(app, __dirname);
+  //
+  //let warpDriveConfig = macros.globalConfig['WarpDrive'];
 
   return maybeEmbroider(app, {
     skipBabel: [
