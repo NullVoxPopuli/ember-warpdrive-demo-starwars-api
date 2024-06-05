@@ -1,3 +1,5 @@
+import { on } from '@ember/modifier';
+
 export const RequestError = <template>
   {{log @error}}
 
@@ -6,4 +8,4 @@ export const RequestError = <template>
   </p>
 
   <button {{on "click" @state.retry}}>Retry</button>
-</template>
+</template>;

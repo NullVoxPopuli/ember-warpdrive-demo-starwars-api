@@ -87,6 +87,9 @@
   "pnpm": {
     "overrides": {
       "@embroider/macros": "^1.16.3-unstable.4d74274"
+    },
+    "patchedDependencies": {
+      "ember-data@5.4.0-alpha.74": "patches/ember-data@5.4.0-alpha.74.patch"
     }
   }
 }

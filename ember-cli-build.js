@@ -26,8 +26,6 @@ module.exports = async function (defaults) {
 
   let warpDriveConfig = macros.globalConfig['WarpDrive'];
 
-  console.log(warpDriveConfig);
-
   return maybeEmbroider(app, {
     skipBabel: [
       {

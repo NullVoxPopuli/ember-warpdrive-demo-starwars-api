@@ -1,0 +1,14 @@
+diff --git a/package.json b/package.json
+index 99e4a132adb2fbca3e669a9c96246155c9100566..8c45930f8a9641f53149fe832a41562fd8758577 100644
+--- a/package.json
++++ b/package.json
+@@ -51,6 +51,9 @@
+     "./test-support": {
+       "default": "./dist/test-support/index.js"
+     },
++    "./app/*": {
++      "default": "./app/*.js"
++    },
+     "./*": {
+       "default": "./dist/*.js"
+     }
