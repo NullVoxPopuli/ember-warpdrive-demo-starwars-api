@@ -20,10 +20,10 @@ export default Route(
       </:error>
 
       <:content as |result|>
-        {{pageTitle result.title}}
+        {{pageTitle result.data.attributes.title}}
 
         <dl>
-          {{#each-in result as |key value|}}
+          {{#each-in result.data.attributes as |key value|}}
             <dt>{{key}}</dt>
             <dd>{{value}}</dd>
           {{/each-in}}

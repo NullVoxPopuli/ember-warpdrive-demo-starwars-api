@@ -1,13 +1,17 @@
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
+import { findRecord } from '@ember-data/rest/request';
 
 export default class Film extends Route {
-  @service('request') manager;
+  @service('store') store;
 
   async model({ id }) {
-    let request = this.manager.request({
-      url: `/films/${id}`,
-    });
+    let request = this.store.request(
+      findRecord({
+        id,
+        type: 'films',
+      }),
+    );
 
     return { request };
   }

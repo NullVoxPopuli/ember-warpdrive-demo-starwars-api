@@ -74,20 +74,20 @@
     "edition": "octane"
   },
   "dependencies": {
-    "@ember-data/request": "5.4.0-alpha.74",
-    "@ember-data/store": "5.4.0-alpha.74",
+    "@ember-data/request": "5.4.0-alpha.76",
+    "@ember-data/request-utils": "5.4.0-alpha.76",
+    "@ember-data/store": "5.4.0-alpha.76",
+    "@ember-data/rest": "5.4.0-alpha.76",
     "@embroider/macros": "^1.16.3-unstable.4d74274",
-    "@warp-drive/build-config": "0.0.0-alpha.11",
-    "@warp-drive/ember": "0.0.0-alpha.36",
-    "ember-data": "5.4.0-alpha.74",
+    "@warp-drive/build-config": "0.0.0-alpha.13",
+    "@warp-drive/schema-record": "0.0.0-alpha.62",
+    "@warp-drive/ember": "0.0.0-alpha.38",
+    "ember-data": "5.4.0-alpha.76",
     "ember-route-template": "^1.0.3"
   },
   "pnpm": {
     "overrides": {
       "@embroider/macros": "^1.16.3-unstable.4d74274"
-    },
-    "patchedDependencies": {
-      "ember-data@5.4.0-alpha.74": "patches/ember-data@5.4.0-alpha.74.patch"
     }
   }
 }

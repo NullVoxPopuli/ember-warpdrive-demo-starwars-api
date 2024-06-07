@@ -8,14 +8,6 @@ import Route from "ember-route-template";
 import { RequestError } from './components/error';
 import { Spinner } from './components/spinner';
 
-function idFor(film) {
-  let url = film.url;
-  let parts = url.split('/');
-  let [,id] = parts.reverse();
-
-  return id;
-}
-
 export default Route(
   <template>
     {{pageTitle "Films"}}
@@ -32,16 +24,16 @@ export default Route(
 
       <:content as |result|>
         <ul>
-          {{#each result.results as |result|}}
+          {{#each result.data as |result|}}
             <li>
-              <h2>{{result.title}}</h2>
-              <LinkTo @route="film" @model={{idFor result}}>View Details</LinkTo>
+              <h2>{{result.attributes.title}}</h2>
+              <LinkTo @route="film" @model={{result.id}}>View Details</LinkTo>
 
               <dl>
                 <dt>Release Date</dt>
-                <dd>{{result.release_date}}</dd>
+                <dd>{{result.attributes.release_date}}</dd>
                 <dt>Director</dt>
-                <dd>{{result.director}}</dd>
+                <dd>{{result.attributes.director}}</dd>
               </dl>
           </li>
           {{/each}}
